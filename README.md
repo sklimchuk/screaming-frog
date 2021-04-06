@@ -9,8 +9,9 @@ Here we're preparing all needed folders and including configs as well.
 
 **licence.txt** - SEO Spider Licence file, you can purchase license [here](https://www.screamingfrog.co.uk/seo-spider/licence/).
 
-**01_nodoc** - config which prevent not needed documentaion/man pages/locales setup.
-spider.config - unattended EULA agreement parameter with storage dir specification.
+**01_nodoc** - config which prevent not needed documentation/man pages/locales setup.
+
+**spider.config** - unattended EULA agreement parameter with storage dir specification.
 
 **.screamingfrogseospider** - JVM parameters can be tuned here.
 
@@ -38,7 +39,7 @@ See [this manual](https://www.screamingfrog.co.uk/seo-spider/user-guide/general/
 # How it works
 
 run_crawler.sh script connects to SFTP server, jump to import folder, grab siteids.json file, parse it to site_urls and site_ids arrays.
-Then in for loop screamingfrogseospider tool in headless mode stated processing of your sites and saving reports in two files for each site (crawl_overview.csv and crawl.seospider). When all sites processed script uploaded all results to SFTP into export folder.
+Then in for loop screamingfrogseospider tool in headless mode started processing of your sites and saving reports into two files for each site (crawl_overview.csv and crawl.seospider). When all sites processed script uploaded all results to SFTP into export folder. Then container will be stopped automatically.
 
 # How to use
 
